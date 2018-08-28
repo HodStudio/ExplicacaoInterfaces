@@ -17,6 +17,10 @@ namespace ExemploEscola
             Discentes = new List<IDiscente>();
         }
 
-        public abstract void Inscrever(IDiscente discente);
+        protected void Inscrever(IDiscente discente)
+        {
+            if (!Discentes.Contains(discente))
+                Discentes.Add(discente);
+        }
     }
 }

@@ -6,10 +6,6 @@ namespace ExemploEscola
     {
         public ProvaEscolar(Professor aplicador, List<string> perguntas, int tempoExecucao) : base(aplicador, perguntas, tempoExecucao) { }
 
-        public override void Inscrever(IDiscente discente)
-        {
-            if (!Discentes.Contains(discente))
-                Discentes.Add(discente);
-        }
+        public void Inscrever(Aluno aluno) => base.Inscrever(aluno);
     }
 }
