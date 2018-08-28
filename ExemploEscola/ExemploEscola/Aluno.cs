@@ -2,7 +2,7 @@
 
 namespace ExemploEscola
 {
-    internal class Aluno : Pessoa
+    internal class Aluno : Pessoa, IDiscente
     {
         public string NomeResponsavel { get; set; }
         public string EmailResponsavel { get; set; }
