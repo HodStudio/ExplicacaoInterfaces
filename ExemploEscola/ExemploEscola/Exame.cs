@@ -9,11 +9,13 @@ namespace ExemploEscola
         public Professor Professor { get; set; }
         public List<string> Perguntas { get; set; }
         public List<Aluno> Alunos { get; set; }
+        public int TempoExecucao { get; set; }
 
-        public Exame(Professor professor, List<string> perguntas)
+        public Exame(Professor professor, List<string> perguntas, int tempoExecucao)
         {
             Professor = professor;
             Perguntas = perguntas;
+            TempoExecucao = tempoExecucao;
             Alunos = new List<Aluno>();
         }
 
