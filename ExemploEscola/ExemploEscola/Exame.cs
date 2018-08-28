@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ExemploEscola
 {
-    class Exame
+    internal abstract class Exame
     {
-        public Professor Professor { get; set; }
+        public IAplicador Aplicador { get; set; }
         public List<string> Perguntas { get; set; }
-        public List<Aluno> Alunos { get; set; }
+        public List<IDiscente> Discentes { get; set; }
         public int TempoExecucao { get; set; }
 
-        public Exame(Professor professor, List<string> perguntas, int tempoExecucao)
+        public Exame(IAplicador aplicador, List<string> perguntas, int tempoExecucao)
         {
-            Professor = professor;
+            Aplicador = aplicador;
             Perguntas = perguntas;
             TempoExecucao = tempoExecucao;
-            Alunos = new List<Aluno>();
+            Discentes = new List<IDiscente>();
         }
 
-        public void InscreverAluno(Aluno aluno)
-        {
-            if (!Alunos.Contains(aluno))
-                Alunos.Add(aluno);
-        }
+        public abstract void Inscrever(IDiscente discente);
     }
 }
