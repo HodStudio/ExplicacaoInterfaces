@@ -22,5 +22,7 @@ namespace ExemploEscola
             if (!Discentes.Contains(discente))
                 Discentes.Add(discente);
         }
+
+        public int CalcularCustoExame() => Aplicador.CalcularSalarioExame(this);
     }
 }
