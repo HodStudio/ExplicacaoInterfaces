@@ -2,15 +2,8 @@
 
 namespace ExemploEscola
 {
-    internal class Aluno
+    internal class Aluno : Pessoa
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public string Rg { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public string Email { get; set; }
-        public string Celular { get; set; }
-
         public string NomeResponsavel { get; set; }
         public string EmailResponsavel { get; set; }
         public string CelularResponsavel { get; set; }
